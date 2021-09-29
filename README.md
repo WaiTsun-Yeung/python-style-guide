@@ -2,7 +2,7 @@
 
 Writing organised code might not come across as an easy task for everyone. However, in practice, a programmer that can 
 write clean and readable code is more valued than one who is gifted with mathematical ingenuity, as a piece of 
-unreadable code is a piece of unusuable code. This matters for both the collaborator working on the same codebase, and 
+unreadable code is a piece of unusable code. This matters for both the collaborator working on the same codebase, and 
 the exact author who originated that piece of code 6 months later. 
 
 As a result, this calls for new languages and coding standards that strive to bring the act of coding closer and closer 
@@ -28,7 +28,7 @@ Python 3.9, and is subjected to future updates.
 
 
 ## Author
-Wai-Tsun Yeung
+Wai-Tsun Yeung (he/his/him)
 
 ##License
-TODO: add license
+[Apache License Version 2.0](LICENSE)
