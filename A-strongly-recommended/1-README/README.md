@@ -62,4 +62,8 @@ users might also care about packaging the repository itself for easier access fr
 TODO: Mention OS-distributed packages first, and refer users to the dependencies' installation guide for difficult 
 package installations such as PyTorch and CUDA. At last talk about the packages that are easiest to install.
 
+[[^top]](#top)
+
 ### <a name="usage"/>III. Usage</a>
+
+[[^top]](#top)
