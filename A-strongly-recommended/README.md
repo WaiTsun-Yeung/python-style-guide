@@ -18,7 +18,7 @@ generating and rendering README.md files.
 
 A good README.md file should have a minimum of the following information:
 
-- The description / purpose of the repository
+- The [description / purpose](1-README/README.md/#description) of the repository
 - Method of Installation, to name some common examples:
     - [requirements.txt](1-README/python-environments-installation-guide/environment/pip-requirements/README.md)
     - [environment.yml](1-README/python-environments-installation-guide/environment/conda-environment/README.md)
@@ -39,7 +39,7 @@ A good README.md file should have a minimum of the following information:
 
 The following websites would serve as a nice introduction to how to write a good README.md file.
 
-- [Template and structure - makeareadme.com](https://www.makeareadme.com/)
+- [makeareadme.com](https://www.makeareadme.com/)
 - [GitHub Docs - Basic writing and formatting syntax](
   https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [GitHub Guides - Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
