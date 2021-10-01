@@ -13,7 +13,8 @@ The folder [README-example](README-example/README.md) contains a sample README d
 - [Resources](#resources) 
 - [Structure](#structure)
   1. [Name & Description](#description)
-  2. 
+  2. [Installation](#installation)
+  3. [Usage](#usage)
 
 ## <a name="resources"/>Resources</a>
 Given the importance of a good README.md file, there are ample online resources on how to write one. To name a few 
@@ -38,10 +39,27 @@ examples:
 As there are countless types of coding projects, there is not a standard format for a README.md document. However, for a
 repository to be usable for others, the README.md document should have the minimum of following sections:
 
-### <a name="description"/>1. Name & Description</a>
-Written at the top part of a README.md document, this tells the potential user the function of this repository. 
+[[^top]](#top)
+
+### <a name="description"/>I. Name & Description</a>
+Written at the top part of a README.md document, this tells the potential user the function of the repository. 
 
 If it is a public repository, this is also the place to advertise it well, and would be best to include the _context_ of 
 where the repository could be used, and any _features_ the authors would want to highlight. For codes where speed and 
 accuracy are important differentiating factors, this is also where the performance evaluation with popular _benchmarks_ 
 should be given.
+
+[[^top]](#top)
+
+### <a name="installation"/>II. Installation</a>
+This is a step-by-step guide where if the user follows through, they should be able to use the repository according to
+the instructions at the [Usage](#Usage) section.
+
+Each programming language has its own package distribution systems. As far as only Python code is concerned, the user
+would need to set up a Python environment, with the necessary Python package dependencies to run the script. Advanced 
+users might also care about packaging the repository itself for easier access from bigger projects.
+
+TODO: Mention OS-distributed packages first, and refer users to the dependencies' installation guide for difficult 
+package installations such as PyTorch and CUDA. At last talk about the packages that are easiest to install.
+
+### <a name="usage"/>III. Usage</a>
