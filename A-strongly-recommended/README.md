@@ -24,15 +24,15 @@ A good README.md file should have a minimum of the following information:
     - [environment.yml](1-README/installation-guide/environment/conda-environment/README.md)
     - [setup.py](1-README/installation-guide/build-package/setup-py/README.md)
     - [make](1-README/installation-guide/build-package/make/README.md)
-    - [Usage](1-README/README.md#usage)
     - [docker image](1-README/installation-guide/docker/README.md)
-    - Clear instructions for users to run the code without need for extensive knowledge of the programming language or 
-      experience in relevant development projects. All necessary and optional arguments that would be called by the user 
-        should be clearly defined. 
-    - If the codebase is an API, all public classes and functions should be well-described and provided with clear 
-      examples. 
-    - If this section is too long, the author should inline the smallest example of usage and provide links to documents 
-      describing more sophisticated examples.
+- [Usage](1-README/README.md#usage)
+  - Clear instructions for users to run the code without need for extensive knowledge of the programming language or 
+    experience in relevant development projects. All necessary and optional arguments that would be called by the user 
+      should be clearly defined. 
+  - If the codebase is an API, all public classes and functions should be well-described and provided with clear 
+    examples. 
+  - If this section is too long, the author should inline the smallest example of usage and provide links to documents 
+    describing more sophisticated examples.
 - License / Copyright
 - Support / Authors and Acknowledgements
 

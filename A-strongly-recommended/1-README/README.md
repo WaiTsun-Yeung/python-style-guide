@@ -59,7 +59,7 @@ Each programming language has its own package distribution systems. As far as on
 would need to set up a Python environment, with the necessary Python package dependencies to run the script. Advanced 
 users might also care about packaging the repository itself for easier access from bigger projects.
 
-Since Python is an interpreted language, it is relatively platform-dependent. Still, if the repository is known to run
+Since Python is an interpreted language, it is relatively platform-independent. Still, if the repository is known to run
 only on certain operating systems and computer architectures, those should be stated at the outset. If there are any
 package dependencies that could not be simply installed by a `pip install <package-name>` or `conda install 
 <package-name>` command, those should also be highlighted at the beginning of the installation section. These packages
