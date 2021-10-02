@@ -53,14 +53,27 @@ should be given.
 
 ### <a name="installation"/>II. Installation</a>
 This is a step-by-step guide where if the user follows through, they should be able to use the repository according to
-the instructions at the [Usage](#Usage) section.
+the instructions at the [Usage](#usage) section.
 
 Each programming language has its own package distribution systems. As far as only Python code is concerned, the user
 would need to set up a Python environment, with the necessary Python package dependencies to run the script. Advanced 
 users might also care about packaging the repository itself for easier access from bigger projects.
 
-TODO: Mention OS-distributed packages first, and refer users to the dependencies' installation guide for difficult 
-package installations such as PyTorch and CUDA. At last talk about the packages that are easiest to install.
+Since Python is an interpreted language, it is relatively platform-dependent. Still, if the repository is known to run
+only on certain operating systems and computer architectures, those should be stated at the outset. If there are any
+package dependencies that could not be simply installed by a `pip install <package-name>` or `conda install 
+<package-name>` command, those should also be highlighted at the beginning of the installation section. These packages
+typically comprised of mostly system- & architecture-dependent low level routines, like [OpenBLAS](
+https://www.openblas.net/), [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit), and deep-learning frameworks such 
+as [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
+
+There are several ways to build a python environment. Sample hello world scripts are provided in [Installation Guide](
+installation-guide):
+
+#### Package and Environment Management systems
+Python has 2 major package distribution systems: pip and conda.
+
+
 
 [[^top]](#top)
 
