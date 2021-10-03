@@ -52,28 +52,44 @@ should be given.
 [[^top]](#top)
 
 ### <a name="installation"/>II. Installation</a>
-This is a step-by-step guide where if the user follows through, they should be able to use the repository according to
-the instructions at the [Usage](#usage) section.
+The Installation section of a README.md document is a step-by-step guide where if the user follows through, they should 
+be able to use the repository according to the instructions at the [Usage](#usage) section.
 
 Each programming language has its own package distribution systems. As far as only Python code is concerned, the user
-would need to set up a Python environment, with the necessary Python package dependencies to run the script. Advanced 
-users might also care about packaging the repository itself for easier access from bigger projects.
+would need to set up a Python runtime environment, with the necessary Python package dependencies to run the script. 
+Advanced users might also care about packaging the repository itself for easier access from bigger projects.
 
 Since Python is an interpreted language, it is relatively platform-independent. Still, if the repository is known to run
 only on certain operating systems and computer architectures, those should be stated at the outset. If there are any
 package dependencies that could not be simply installed by a `pip install <package-name>` or `conda install 
-<package-name>` command, those should also be highlighted at the beginning of the installation section. These packages
-typically comprised of mostly system- & architecture-dependent low level routines, like [OpenBLAS](
+<package-name>` command, those should also be highlighted at the beginning of the installation section. Those big
+packages typically comprised of mostly system- & architecture-dependent low level routines, like [OpenBLAS](
 https://www.openblas.net/), [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit), and deep-learning frameworks such 
 as [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
 
 There are several ways to build a python environment. Sample hello world scripts are provided in [Installation Guide](
 installation-guide):
 
+TODO: Move the below to its own README.md document, make an unordered list of package installation methods then move on.
 #### Package and Environment Management systems
-Python has 2 major package distribution systems: pip and conda.
+Python has 2 major package distribution systems: pip and conda. A package distribution system distributes well-tested 
+package binaries built / compiled for specific operating systems and computer architectures. Without them, users would 
+often need to build the dependent packages from their source codes, which is a tedious and time-consuming process. These 
+source codes cannot be used out of the box because they are integrated with other compiled languages, mostly for the
+improvement of computational speed, a well-known weakness of the Python language. 
 
+For this reason, like any compiled language, whether a package can be distributed through pip / conda depends on the 
+operating system and computer architecture where it would be run. Oftentimes, a repository can be built from its source 
+but do not have prebuilt binaries available for specific operating systems and computer architectures. Hence, the user 
+is always encouraged to check out the source code if they cannot install the package through pip / conda.
 
+Both pip and conda have utilities for creating project-specific virtual environments. By assigning each project its own 
+Python executable, it mitigates the problem of package version conflicts over multiple unrelated coding projects. Python 
+does offer the use of user- and root-installed Python executable as the runtime environment. However, reconfiguration of
+those executables is especially difficult, so whenever possible, a virtual environment should be used instead.
+
+##### pip
+Pip is Python's native package management system.
 
 [[^top]](#top)
 
