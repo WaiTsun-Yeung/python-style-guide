@@ -51,7 +51,7 @@ should be given.
 
 [[^top]](#top)
 
-### <a name="installation"/>II. Installation</a>
+### <a name="installation"/>II. [Installation](installation-guide)</a>
 The Installation section of a README.md document is a step-by-step guide where if the user follows through, they should 
 be able to use the repository according to the instructions at the [Usage](#usage) section. The following is the advised
 order of the Installation section:
