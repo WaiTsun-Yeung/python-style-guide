@@ -1,4 +1,4 @@
-# A. <a name="top"/>Important practices that improve readability</a>
+# A. <a name="top"/>Important Practices that Improve Readability</a>
 
 [[home]](/README.md)
 
