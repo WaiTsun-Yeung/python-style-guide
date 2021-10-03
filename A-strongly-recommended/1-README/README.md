@@ -53,22 +53,31 @@ should be given.
 
 ### <a name="installation"/>II. Installation</a>
 The Installation section of a README.md document is a step-by-step guide where if the user follows through, they should 
-be able to use the repository according to the instructions at the [Usage](#usage) section.
+be able to use the repository according to the instructions at the [Usage](#usage) section. The following is the advised
+order of the Installation section:
 
-Each programming language has its own package distribution systems. As far as only Python code is concerned, the user
-would need to set up a Python runtime environment, with the necessary Python package dependencies to run the script. 
-Advanced users might also care about packaging the repository itself for easier access from bigger projects.
+1. Since Python is an interpreted language, it is relatively platform-independent. However, if the repository is
+ known to run only on certain operating systems and computer architectures, those should be stated at the outset. 
+2. If there are any package dependencies that could not be simply installed by a `pip install <package-name>` or
+`conda install <package-name>` command, those should also be highlighted at the beginning of the installation section. 
+These big packages typically comprised of mostly system- & architecture-dependent low level routines, like [OpenBLAS](
+https://www.openblas.net/), [CUDNN](https://developer.nvidia.com/cudnn), and deep-learning frameworks such as [PyTorch](
+https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
+3. At last, commands for installation of the rest of the package dependencies shall be written out. The contributors 
+should provide a requirements.txt or environment.yml file listing the required packages, so user can install them 
+through calling `pip install requirements.txt` or `conda env update --prefix ./env --file environment.yml  --prune`.
+   - For more advanced projects involving multiple programming languages, the contributors may need to provide the 
+   setup.py or Makefile file for building / packaging the repository instead. In this case, the user would need to be 
+   instructed to call them with the `python setup.py [options]` or `make [options]` command.
+4. (Optional) A Dockerfile can also be prepared where even better compartmentalisation is required. This becomes useful 
+when some of the package dependencies are not distributed through pip or conda, examples include [CUDNN](
+https://developer.nvidia.com/cudnn), [OpenBLAS](https://www.openblas.net/) and [CMake](https://cmake.org/). 
+Running a Dockerfile is a complex process involving multiple steps, which will be described in the [Installation Guide 
+for Python Dependencies](installation-guide). Given the complexity of managing Docker images, installation through 
+Docker should only be provided as an alternative, after the other above-mentioned installation steps have been laid out.
 
-Since Python is an interpreted language, it is relatively platform-independent. Still, if the repository is known to run
-only on certain operating systems and computer architectures, those should be stated at the outset. If there are any
-package dependencies that could not be simply installed by a `pip install <package-name>` or `conda install 
-<package-name>` command, those should also be highlighted at the beginning of the installation section. Those big
-packages typically comprised of mostly system- & architecture-dependent low level routines, like [OpenBLAS](
-https://www.openblas.net/), [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit), and deep-learning frameworks such 
-as [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
-
-There are several ways to build a python environment. Sample hello world scripts are provided in [Installation Guide](
-installation-guide):
+There are several ways to build a python environment. Sample hello world scripts are provided in [Installation Guide for
+Python Dependencies](installation-guide):
 
 TODO: Move the below to its own README.md document, make an unordered list of package installation methods then move on.
 #### Package and Environment Management systems

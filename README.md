@@ -18,9 +18,9 @@ first one describes practices that have a profound impact on the utility of a co
 a minimum required effort in his own coding projects. The second one is suggestive, and even at times, argumentative, 
 subjective to the coders' personal preferences.
 
-Brevity is valued in this guide. However, if the example is too comprehensive to be included in the README.md file, the 
-relevant example will have its own python script or even its own subrepository. This guide mostly follows the syntax of 
-Python 3.9, and is subjected to future updates.
+Brevity is valued in this guide. However, if a section is too comprehensive to be included in the README.md file, that 
+section will be assigned its own subrepository for better exposition. This guide mostly follows the syntax of Python 
+3.9, and is subjected to future updates.
 
 ## Table of contents
 1. [Important practices that improve readability](A-strongly-recommended/README.md)
