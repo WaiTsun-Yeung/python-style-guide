@@ -1,6 +1,6 @@
 # A-1. <a name="top"/>How to write a good README.md file</a>
 
-[[home]](/README.md) > [[A-strongly-recommended]](/A-strongly-recommended/README.md)
+[[home]](/README.md) > [[A-Important practices]](/A-strongly-recommended/README.md)
 
 The primary purpose of a README.md is to instruct _usage_ of the repository from download to deployment, assuming 
 only minimal user understanding of package distribution systems. A README.md document is also important for asserting 
