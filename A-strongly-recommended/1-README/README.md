@@ -51,7 +51,7 @@ should be given.
 
 [[^top]](#top)
 
-### <a name="installation"/>II. [Installation](installation-guide)</a>
+### <a name="installation"/>II. [Installation](installation-guide/README.md)</a>
 The Installation section of a README.md document is a step-by-step guide where if the user follows through, they should 
 be able to use the repository according to the instructions at the [Usage](#usage) section. The following is the advised
 order of the Installation section:
@@ -64,7 +64,7 @@ These big packages typically comprised of mostly system- & architecture-dependen
 https://www.openblas.net/), [CUDNN](https://developer.nvidia.com/cudnn), and deep-learning frameworks such as [PyTorch](
 https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
 3. At last, commands for installation of the rest of the package dependencies shall be written out. The contributors 
-should provide a requirements.txt or environment.yml file listing the required packages, so user can install them 
+should provide a requirements.txt or environment.yml file listing the required packages, so the user can install them 
 through calling `pip install requirements.txt` or `conda env update --prefix ./env --file environment.yml  --prune`.
    - For more advanced projects involving multiple programming languages, the contributors may need to provide the 
    setup.py or Makefile file for building / packaging the repository instead. In this case, the user would need to be 
@@ -73,32 +73,12 @@ through calling `pip install requirements.txt` or `conda env update --prefix ./e
 when some of the package dependencies are not distributed through pip or conda, examples include [CUDNN](
 https://developer.nvidia.com/cudnn), [OpenBLAS](https://www.openblas.net/) and [CMake](https://cmake.org/). 
 Running a Dockerfile is a complex process involving multiple steps, which will be described in the [Installation Guide 
-for Python Dependencies](installation-guide). Given the complexity of managing Docker images, installation through 
+for Python Dependencies](installation-guide/README.md). Given the complexity of managing Docker images, installation through 
 Docker should only be provided as an alternative, after the other above-mentioned installation steps have been laid out.
 
-There are several ways to build a python environment. Sample hello world scripts are provided in [Installation Guide for
-Python Dependencies](installation-guide):
+A more comprehensive guide to construct a Python environment, as well as sample hello world scripts, are provided in 
+[Installation Guide for Python Dependencies](installation-guide/README.md):
 
-TODO: Move the below to its own README.md document, make an unordered list of package installation methods then move on.
-#### Package and Environment Management systems
-Python has 2 major package distribution systems: pip and conda. A package distribution system distributes well-tested 
-package binaries built / compiled for specific operating systems and computer architectures. Without them, users would 
-often need to build the dependent packages from their source codes, which is a tedious and time-consuming process. These 
-source codes cannot be used out of the box because they are integrated with other compiled languages, mostly for the
-improvement of computational speed, a well-known weakness of the Python language. 
-
-For this reason, like any compiled language, whether a package can be distributed through pip / conda depends on the 
-operating system and computer architecture where it would be run. Oftentimes, a repository can be built from its source 
-but do not have prebuilt binaries available for specific operating systems and computer architectures. Hence, the user 
-is always encouraged to check out the source code if they cannot install the package through pip / conda.
-
-Both pip and conda have utilities for creating project-specific virtual environments. By assigning each project its own 
-Python executable, it mitigates the problem of package version conflicts over multiple unrelated coding projects. Python 
-does offer the use of user- and root-installed Python executable as the runtime environment. However, reconfiguration of
-those executables is especially difficult, so whenever possible, a virtual environment should be used instead.
-
-##### pip
-Pip is Python's native package management system.
 
 [[^top]](#top)
 
