@@ -20,6 +20,7 @@ multiple Python projects.
       - [Virtual Environment](#pip-virtual-environment)
    2. [Conda](#conda)
 
+
 ## <a name="management"/>1. Package and Environment Management systems</a>
 Python has 2 major package distribution systems: pip and conda. A package distribution system distributes well-tested 
 Python packages. Without them, users would often need to build the dependent packages from their source codes, which 
@@ -295,10 +296,33 @@ are a few features that are particularly important. Those include:
   # Package Index and wheel files.    
   ``` 
 
-- Switching Python version
+- **Switching Python version**
+  ```bash
+  # To change Python version, e.g. to Python 3.6, enter:
+  conda install python=3.6
+  # Note that this will likely remove most installed packages due to version conflicts, those will need to be 
+  # reinstalled. It is also recommended to clone a backup before switching Python versions.
+  ```
 
-Package dependencies version management
+- **Package dependencies version management**
 
-Non-Python package support and exclusively binary packages
+  Unlike pip which installs dependencies recursively, conda would evaluate the requirements of all packages with a 
+satisfiability (SAT) solver to minimise possible package conflicts.
 
-Different package repositories
+- **Exclusively binary packages**
+    
+    Pip allows installation from both source code and Python wheels (binaries). However, conda only distributes package 
+binaries, which are hosted on [Anaconda Cloud](https://anaconda.org/). For this reason, it is much more difficult to
+publish Python packages to Anaconda Cloud, and many Python packages are only available on pip and not conda, especially 
+for users running on particular operating systems and computer architectures.
+
+    In this case, it is recommended to install those unavailable packages through pip with the `--no-deps` option, i.e.,
+`pip install --no-deps <package-name>`, then check for missing dependencies using `pip check`, and install those with 
+either conda or pip.
+
+- **requirements.txt**
+
+    Like pip, conda can install a list of packages with the requirements.txt file, with the command `conda install 
+--file requirements.txt`
+
+[[^top]](#top)
