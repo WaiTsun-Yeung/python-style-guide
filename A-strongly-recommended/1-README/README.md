@@ -72,12 +72,13 @@ through calling `pip install requirements.txt` or `conda env update --prefix ./e
 4. (Optional) A Dockerfile can also be prepared where even better compartmentalisation is required. This becomes useful 
 when some of the package dependencies are not distributed through pip or conda, examples include [CUDNN](
 https://developer.nvidia.com/cudnn), [OpenBLAS](https://www.openblas.net/) and [CMake](https://cmake.org/). 
-Running a Dockerfile is a complex process involving multiple steps, which will be described in the [Installation Guide 
-for Python Dependencies](installation-guide/README.md). Given the complexity of managing Docker images, installation through 
-Docker should only be provided as an alternative, after the other above-mentioned installation steps have been laid out.
+Running a Dockerfile is a complex process involving multiple steps, which will be described in the [Managing Python 
+Environments](installation-guide/README.md). Given the complexity of managing Docker images, installation 
+through Docker should only be provided as an alternative, after the other above-mentioned installation steps have been 
+laid out.
 
 A more comprehensive guide to construct a Python environment, as well as sample hello world scripts, are provided in 
-[Installation Guide for Python Dependencies](installation-guide/README.md):
+[Managing Python environments](installation-guide/README.md):
 
 
 [[^top]](#top)

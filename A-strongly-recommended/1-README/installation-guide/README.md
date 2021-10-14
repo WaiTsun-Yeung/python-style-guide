@@ -1,4 +1,4 @@
-# A-1-II. <a name="top"/>Installation Guide for Python Dependencies</a>
+# A-1-II. <a name="top"/>Managing Python Environments</a>
 
 [[home]](/README.md) > [[A-Important practices]](/A-strongly-recommended/README.md) > [[1-README]](
 /A-strongly-recommended/1-README/README.md)
@@ -10,15 +10,19 @@ are also recommended to package their subroutines locally for a better-container
 
 This guide introduces how to install package libraries with these package management systems, and how to build a package 
 from scratch. Special attention will be paid to the containerisation of Python environments. Although this is not the
-default mode of Python package installation, containerisation is
-an extra step that is crucial to the management of 
+default mode of Python package installation, containerisation is an extra step that is crucial to the management of 
 multiple Python projects.
 
 ## Table of Contents 
-   1. [Pip](#pip)
-      - [requirements.txt](#requirements-txt)
-      - [Virtual Environment](#pip-virtual-environment)
-   2. [Conda](#conda)
+   1. [Package and Environment Management systems](#management)
+      1. [Pip](#pip)
+         - [requirements.txt](#requirements-txt)
+         - [Virtual Environment](#pip-virtual-environment)
+      2. [Conda](#conda)
+   2. [Packaging local repository](#package)
+      - [setuptools](#setuptools)
+      - [conda-build](#conda-build)
+   3. [Docker](#docker)
 
 
 ## <a name="management"/>1. Package and Environment Management systems</a>
@@ -326,3 +330,4 @@ either conda or pip.
 --file requirements.txt`
 
 [[^top]](#top)
+
