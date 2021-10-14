@@ -10,11 +10,11 @@ are also recommended to package their subroutines locally for a better-container
 
 This guide introduces how to install package libraries with these package management systems, and how to build a package 
 from scratch. Special attention will be paid to the containerisation of Python environments. Although this is not the
-default mode of Python package installation, containerisation is an extra step that is crucial to the management of 
+default mode of Python package installation, containerisation is
+an extra step that is crucial to the management of 
 multiple Python projects.
 
-## Table of Contents
-1. [Package and Environment Management systems](#management)
+## Table of Contents 
    1. [Pip](#pip)
       - [requirements.txt](#requirements-txt)
       - [Virtual Environment](#pip-virtual-environment)
@@ -35,7 +35,7 @@ weakness of the Python language. For those repositories that are not distributed
 computer architectures, oftentimes they can still be built from its source. Hence, the user is always encouraged to 
 check out the source code and attempt building from source if they cannot install the package through pip / conda.
 
-By default, Python packages are installed to the root Python executable. However, reconfiguration of those executables 
+By default, Python packages are assigned to the root Python executable. However, reconfiguration of those executables 
 is especially difficult. For this reason, both pip and conda have utilities for creating project-specific virtual 
 environments. By assigning each project its own Python executable, it mitigates the problem of package version conflicts 
 over multiple unrelated coding projects. Package conflict is often a major source of headache in large project 
@@ -61,7 +61,7 @@ Aside from installation and uninstallation, other useful pip functionalities inc
 
 - **Listing installed packages**
 
-   There are two commands that list packages installed to the current python executable: `pip freeze`, which lists
+   There are two commands that list packages assigned to the current python executable: `pip freeze`, which lists
    packages in the `<package-name>==<package-version>` format; and `pip list`, which does the same but in a two-column
    tabular format.
 - **Showing package information**
@@ -121,16 +121,16 @@ Python packages upon installation, whilst Anaconda adds about 200+ Python packag
 is more lightweight, but installing packages would typically be longer for Miniconda users, vice versa for Anaconda. 
 Anaconda also includes a graphical user interface, which might be a decent bonus for some developers.
 
-There are several features of conda package management that are worth highlighting, especially when compared to pip's 
-environment managers:
+The complete documentation for conda can be found [here](https://docs.conda.io/en/latest/). There are several features 
+of conda package management that are worth highlighting, especially when compared to pip's environment managers:
 
 - **Default environment**
 
     Unlike Python which defaults its executable at the root system, Conda manages all its environments within the 
-anaconda folder inside the user's home directory by default. Once the user starts up conda, a Python environment named 
-'base' will be activated. Even though developers are still recommended to create a new environment and not to use the 
-base environment for testing and development, managing packages in the conda base environment is still much safer than 
-in the root Python environment.
+anaconda or anaconda3 folder inside the user's home directory by default. Once the user starts up conda, a Python 
+environment named 'base' will be activated. Even though developers will always be recommended to create a new 
+environment and not to use the base environment for testing and development, managing packages in the conda base 
+environment is still much safer than in the root Python environment.
 
 - **Environment rollback**
 
@@ -143,7 +143,7 @@ environment can be rolled back to a specified timepoint by its revision number w
 $ python --version
 Python 3.9.7
 
-# Calling conda list --revisions when the base environment has just been created.
+# Calling conda list --revisions when the conda environment has just been created.
 $ conda list --revisions
 2021-09-28 21:02:39  (rev 0)
     +ca-certificates-2021.7.5 (defaults/win-64)
@@ -190,9 +190,9 @@ $ conda list --revisions
     +numpy-base-1.21.2 (defaults/win-64)
     +six-1.16.0 (defaults/noarch)
 
-# Now I regret installing numpy and wish to revert back to the vanilla conda environment (rev 0), so I call
+# Now I regret installing numpy and wish to revert back to the vanilla conda environment (rev 0), so I call:
 $ conda install --rev 0
-## A conda install/uninstsall terminal output will be returned about removing numpy, skipping over them. Calling conda 
+## A conda install/remove terminal output will be returned about removing numpy, skipping over them. Calling conda 
 # list --revisions again.
 $ conda list --revisions
 2021-09-28 21:02:39  (rev 0)
@@ -238,9 +238,64 @@ $ conda list --revisions
 # change in history.
 ```
 
-Creating, removing, renaming, cloning and switching between environments
+- **Managing different environments**
 
-Switching Python version
+    Conda has made managing Python environments the smoothest experience out of all Python environment managers. Instead
+of letting users assign the Python environment directory for each project, conda defaults environment creation to within
+the anaconda / anaconda3 folder in the user's home directory. This encourages a delocalised manner of associating
+project directories with Python environments, which is particularly useful when multiple large coding projects are 
+managed, and when some repositories are utilised in several different projects.
+
+    Conda has given a comprehensive guide [here](
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) on environment management. There
+are a few features that are particularly important. Those include:
+ 
+  - **Creation and removal**    
+  ```bash
+  # To create a conda environment with name myenv:
+  $ conda create --name myenv
+    
+  # To create environment myenv with a specific Python version, e.g. Python 3.6:
+  $ conda create --name myenv python=3.6
+    
+  # To remove environment myenv:
+  $ conda remove --name myenv --all
+  # The --all option means the removal of all installed packages.
+  ```
+  - **Activation and deactivation**
+  ```bash
+  # conda defaults to the base environment upon activation. If conda doesn't start automatically when your terminal 
+  # window is opened, call:
+  $ conda activate
+  
+  # Existing conda environments can be returned by calling:
+  (base)$ conda info --envs
+  # conda environments:
+  #
+  base                  *  C:\Users\User\anaconda3
+  myenv                    C:\Users\User\anaconda3\envs\myenv
+  myenv2                   C:\Users\User\anaconda3\envs\myenv2
+  
+  # Now we know the conda environment myenv exists, it can be activated by:
+  (base)$ conda activate myenv
+  
+  # Switching to another Python environment (myenv_different) can be called by a similarly simple command:
+  (myenv)$ conda activate myenv_different
+  
+  # To return to the base environment (deactivation), call:
+  (myenv_different)$ conda activate
+  ```
+  - **Cloning**
+  ```bash
+  # In case you wish to experiment with your current environment but are worried you might mess it up, you can clone the
+  # working environment into a new one:
+  # For example, to clone myenv into a new environment myenv_similar:
+  $ conda create --name myenv_similar --clone myenv
+  # This method copy packages directly, so it will also clone packages installed through other means, e.g., Python 
+  # Package Index and wheel files.    
+  ``` 
+
+- Switching Python version
 
 Package dependencies version management
 
