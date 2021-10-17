@@ -21,7 +21,7 @@ A good README.md file should have a minimum of the following information:
 - The [description / purpose](1-README/README.md/#description) of the repository
 - [Method of Installation](1-README/README.md/#installation), to name some common examples:
     - [requirements.txt](1-README/installation-guide/environment/pip-requirements/README.md)
-    - [setuptools](1-README/installation-guide/build-package/setuptools/README.md)
+    - [setuptools](1-README/installation-guide/build-package/pyproject-toml/README.md)
     - [docker image](1-README/installation-guide/docker/README.md)
 - [Usage](1-README/README.md#usage)
   - Clear instructions for users to run the code without need for extensive knowledge of the programming language or 

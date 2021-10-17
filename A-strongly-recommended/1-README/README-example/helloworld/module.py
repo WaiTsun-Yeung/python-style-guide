@@ -2,7 +2,7 @@ import numpy
 import pyfiglet
 
 
-def main() -> None:
+def generate_message() -> None:
     """
     Returns a hello world message with a lucky number.
     """
@@ -14,7 +14,3 @@ def main() -> None:
     hello_world_message: str = "Hello, world! Your lucky number is " + str(lucky_number[0])
     _FONT: str = 'starwars'
     print(pyfiglet.figlet_format(hello_world_message, font=_FONT))
-
-
-if __name__ == "__main__":
-    main()
